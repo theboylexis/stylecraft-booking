@@ -1,0 +1,112 @@
+.confirmation-wrapper {
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.confirmation-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto var(--space-5);
+    background: var(--color-success-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-success);
+    animation: scaleIn 0.4s ease;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.confirmation-wrapper h1 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-3);
+}
+
+.confirmation-message {
+    color: var(--color-gray-600);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--space-6);
+    line-height: var(--line-height-relaxed);
+}
+
+.confirmation-id {
+    display: inline-flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    padding: var(--space-4) var(--space-6);
+    background: var(--color-primary-light);
+    border-radius: var(--radius-xl);
+    margin-bottom: var(--space-6);
+}
+
+.confirmation-id span {
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-500);
+    font-weight: var(--font-weight-medium);
+}
+
+.confirmation-id strong {
+    font-size: var(--font-size-xl);
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
+}
+
+.confirmation-info {
+    text-align: left;
+    margin-bottom: var(--space-6);
+}
+
+.confirmation-info h3 {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--space-4);
+    font-weight: var(--font-weight-semibold);
+}
+
+.confirmation-info ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.confirmation-info li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3);
+    background: var(--color-gray-50);
+    border-radius: var(--radius-lg);
+    color: var(--color-gray-700);
+    font-size: var(--font-size-sm);
+}
+
+.confirmation-info li svg {
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.confirmation-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    align-items: center;
+}
+
+@media (min-width: 480px) {
+    .confirmation-actions {
+        flex-direction: row;
+        justify-content: center;
+    }
+}

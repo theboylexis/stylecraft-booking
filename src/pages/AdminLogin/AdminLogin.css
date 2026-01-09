@@ -1,0 +1,108 @@
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: var(--space-8) 0;
+}
+
+.login-card {
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: var(--space-6);
+}
+
+.login-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto var(--space-4);
+    background: var(--color-primary-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+}
+
+.login-header h1 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-2);
+}
+
+.login-card .error-banner {
+    margin-bottom: var(--space-4);
+}
+
+.btn-block {
+    width: 100%;
+    justify-content: center;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: var(--space-5);
+    padding-top: var(--space-5);
+    border-top: 1px solid var(--color-gray-100);
+}
+
+.link-button {
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    font-size: var(--font-size-sm);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.link-button:hover {
+    text-decoration: underline;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    margin-top: var(--space-4);
+    color: var(--color-gray-500);
+    font-size: var(--font-size-sm);
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: var(--color-gray-700);
+}
+
+/* Input icon positioning fix */
+.login-card .input-with-icon {
+    position: relative;
+}
+
+.login-card .input-icon {
+    position: absolute;
+    left: var(--space-3);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-gray-400);
+    pointer-events: none;
+}
+
+.login-card .input-with-icon .form-input {
+    padding-left: calc(var(--space-3) + 24px);
+}
+
+.spinning {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
