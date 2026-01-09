@@ -15,8 +15,18 @@ connectDB();
 // Initialize Express app
 const app = express();
 
+// CORS configuration - allow frontend domains
+const corsOptions = {
+    origin: [
+        'http://localhost:5173',
+        'https://stylecraft-booking.vercel.app',
+        /\.vercel\.app$/  // Allow all Vercel preview deployments
+    ],
+    credentials: true
+};
+
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // API Routes
